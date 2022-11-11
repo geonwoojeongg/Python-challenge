@@ -40,7 +40,7 @@ with open(csvpath, 'r+') as csvfile:
     greatest_decrease_date = (date[greatest_decrease_index+1])
 
 print(
-f""" Financial Analysis
+f"""Financial Analysis
 ----------------------------
 Total months: {total_months}
 Total: ${total_amount}
