@@ -60,3 +60,20 @@ Total Votes: {total_votes}
 ----------------------------
 Winner: {max(candidate_votes, key=candidate_votes.get)}
 ----------------------------""")
+
+# Export a text file with the results.
+output_path = os.path.join('PyPoll','analysis','budget_data_analysis.txt')
+output = open(output_path, "w")
+output.write(
+f"""
+Election Results
+---------------------------
+Total Votes: {total_votes}
+---------------------------
+{print_names[0]}: {percentage[0]}% ({print_votes[0]})
+{print_names[1]}: {percentage[1]}% ({print_votes[1]})
+{print_names[2]}: {percentage[2]}% ({print_votes[2]})
+----------------------------
+Winner: {max(candidate_votes, key=candidate_votes.get)}
+----------------------------""")
+output.close()

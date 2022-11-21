@@ -47,3 +47,16 @@ Total: ${total_amount}
 Average Change: ${average_change}
 Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})
 Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})""")
+
+# Export a text file with the results.
+output_path = os.path.join('PyBank','analysis','budget_data_analysis.txt')
+output = open(output_path, "w")
+output.write(
+f"""Financial Analysis
+----------------------------
+Total months: {total_months}
+Total: ${total_amount}
+Average Change: ${average_change}
+Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})
+Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})""")
+output.close()
